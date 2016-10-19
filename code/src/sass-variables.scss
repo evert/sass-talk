@@ -1,0 +1,10 @@
+$text-color: #CCC;
+$background-color: #3CC;
+
+$main-font: Helvetica, Arial, sans-serif;
+
+body {
+    color: $text-color;
+    background-color: $background-color;
+    font-family: $main-font;
+}

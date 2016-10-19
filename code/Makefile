@@ -1,20 +1,28 @@
-# Space separated
-PATTERNS=*.css
+STYLE=xcode
 
-#code: html/header.html
-#	(cd src; find -name '$(PATTERNS)' ) | xargs -n1 -Ifoo pygmentize -o rtf/foo.rtf src/foo
-#	(cd src; find -name '$(PATTERNS)' ) | xargs -n1 -Ifoo sh -c "cp html/header.html html/foo.html; pygmentize -f html src/foo >> html/foo.html"
-#
-#html/style.css:
-#	pygmentize -f html -S monokai > html/style.css
+CSSSRC = $(wildcard src/*.css)
+SCSSSRC = $(wildcard src/*.scss)
 
-#html/header.html: html/style.css
-#	echo '<html><head><style type="text/css">' > html/header.html
-#	cat html/style.css >> html/header.html
-#	echo '</style></head><body>' >> html/header.html
+# Contains three sets of files:
+# 1. RTF output of css files
+# 2. RTF output of scss files
+# 3. RTF output of scss files that were compiled
+RTF = $(patsubst src/%.css, rtf/%.css.rtf, $(CSSSRC)) $(patsubst src/%.scss, rtf/%.scss.rtf, $(SCSSSRC)) $(patsubst src/%.scss, rtf/%.css.rtf, $(SCSSSRC))
 
-highlight:
-	(cd src; find -name '$(PATTERNS)' ) | xargs -n1 -Ifoo sh -c "highlight -O rtf src/foo > rtf/foo.rtf"
+all: $(RTF)
+
+src/%.css: src/%.scss
+	sass --sourcemap=none $< $@
+
+rtf/%.scss.rtf: src/%.scss
+	pygmentize -O style=$(STYLE) -o $@ $<
+
+rtf/%.css.rtf: src/%.css
+	pygmentize -O style=$(STYLE) -o $@ $<
+
+clean:
+	rm rtf/*.rtf
+
 
 install:
-	sudo apt-get install fonts-roboto highlight
+	sudo apt-get install fonts-roboto

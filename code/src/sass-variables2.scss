@@ -1,0 +1,9 @@
+$brand-primary:   #0275d8;
+
+h1 {
+    color: $brand-primary;
+}
+
+h2 {
+    color: lighten($brand-primary, 10%)
+}

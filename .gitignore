@@ -3,3 +3,6 @@
 
 # Libreoffice swap
 .~*#
+
+# Sass cache
+code/.sass-cache
