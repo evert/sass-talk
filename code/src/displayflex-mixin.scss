@@ -1,0 +1,22 @@
+@mixin display-flex {
+      display:-ms-flexbox; // IE 
+      display:-webkit-flex; // Webkit 
+      display:flex; // Standard 
+}
+
+body {
+    @include display-flex;
+
+    header {
+        @include display-flex;
+    }
+    main {
+        @include display-flex;
+        aside {
+            @include display-flex;
+        }
+    }
+    footer {
+        @include display-flex;
+    }
+}

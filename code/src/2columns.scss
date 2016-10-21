@@ -1,0 +1,25 @@
+@mixin sidebar-layout {
+      display:-ms-flexbox;
+      display:-webkit-flex;
+      display:flex;
+
+      -ms-flex-direction:column;
+      -webkit-flex-direction:column;
+      flex-direction: column;
+
+      aside {
+         flex-shrink:0;
+         width: 200px;
+      }
+
+}
+
+article {
+
+   @include sidebar-layout;
+
+   aside {
+        background: #ccf;
+   } 
+
+}

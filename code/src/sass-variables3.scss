@@ -1,0 +1,8 @@
+$modal-height: 500px;
+
+.modal {
+    position: absolute;
+    height: $modal-height;
+    top: 50%;
+    margin-top: $modal-height / 2;
+}

@@ -1,0 +1,5 @@
+body {
+      display:-ms-flexbox; // IE 
+      display:-webkit-flex; // Webkit 
+      display:flex; // Standard 
+}
