@@ -1,0 +1,16 @@
+.btn {
+    border-radius: 5px;
+    border: 0;
+    background: #ccc;
+    color: white;
+}
+
+.btn-save {
+    @extend .btn;
+    background: #44c;
+}
+
+.btn-cancel {
+    @extend .btn;
+    background: #c44;
+}
