@@ -1,0 +1,17 @@
+section {
+   
+    @extend ".row";
+
+    aside {
+
+        @extend ".col-md4";
+
+    }
+
+    article {
+
+        @extend ".col-md8";
+
+    }
+
+}

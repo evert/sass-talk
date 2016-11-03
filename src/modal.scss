@@ -1,0 +1,13 @@
+
+@mixin modal($height) {
+    position: absolute;
+    height: $modal-height;
+    top: 50%;
+    margin-top: $modal-height / 2;
+}
+
+.save-modal {
+
+    @include modal(500px);
+
+}
