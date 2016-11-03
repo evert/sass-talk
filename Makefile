@@ -23,6 +23,9 @@ rtf/%.css.rtf: src/%.css
 rtf/%.sh.rtf: src/%.sh
 	pygmentize -O style=$(STYLE) -o $@ $<
 
+rtf/%.html.rtf: src/%.html
+	pygmentize -O style=$(STYLE) -o $@ $<
+
 clean:
 	rm rtf/*.rtf
 

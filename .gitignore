@@ -5,4 +5,4 @@
 .~*#
 
 # Sass cache
-code/.sass-cache
+.sass-cache
