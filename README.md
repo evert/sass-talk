@@ -1,6 +1,15 @@
 Making CSS fun again with SASS
 ==============================
 
+This repository contains the slides, notes and sources for my talk "Making CSS
+fun again with SASS".
+
+This talk was given at True North PHP 2016.
+
+* [joind.in link][7].
+* [Folow me on twitter][8].
+
+
 References
 ----------
 
@@ -17,3 +26,5 @@ References
 [4]: http://www.howtocreate.co.uk/acid/
 [5]: http://sass-lang.com/guide
 [6]: https://github.com/twbs/bootstrap/
+[7]: https://joind.in/event/truenorthphp/making-css-fun-again-with-sass
+[8]: https://twitter.com/evertp
